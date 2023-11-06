@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment"
+        android:title="상품 등록"
+        android:icon="@drawable/hamster" />
+    <item android:id="@+id/setCarrotFragment"
+        android:title="HOME"
+        android:icon="@drawable/hamster" />
+    <item android:id="@+id/userdataFragment"
+        android:title="내정보"
+        android:icon="@drawable/hamster" />
+    />
+</menu>

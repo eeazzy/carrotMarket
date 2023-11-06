@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/showOtherProductFragment2"
+
+    tools:context="com.example.carrotmarket.fragments.showOtherProductFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/other1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제목" />
+
+            <EditText
+                android:id="@+id/otherTitle"
+                android:layout_width="142dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="title" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/other2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내용"
+                />
+
+            <EditText
+                android:id="@+id/otherDetails"
+                android:layout_width="373dp"
+                android:layout_height="145dp"
+                android:inputType="text"
+                android:hint="detail" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/other3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가격"
+                />
+
+            <EditText
+                android:id="@+id/otherPrice"
+                android:layout_width="187dp"
+                android:layout_height="57dp"
+                android:hint="price"
+                android:inputType="text" />
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/otherBackHomeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="뒤로가기" />
+
+        <Button
+            android:id="@+id/startChatBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="채팅방으로" />
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

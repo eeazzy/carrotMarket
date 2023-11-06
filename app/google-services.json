@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "18768981365",
+    "firebase_url": "https://finalproject-fe4a5-default-rtdb.firebaseio.com",
+    "project_id": "finalproject-fe4a5",
+    "storage_bucket": "finalproject-fe4a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18768981365:android:2cfd6b7371583c197cb73c",
+        "android_client_info": {
+          "package_name": "com.example.carrotmarket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC257khUcpTl7YSMH8wdmAuYmd3qtdMnG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18768981365:android:3b554f2e605acf1d7cb73c",
+        "android_client_info": {
+          "package_name": "com.example.finalproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC257khUcpTl7YSMH8wdmAuYmd3qtdMnG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

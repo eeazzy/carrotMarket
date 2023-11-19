@@ -106,17 +106,25 @@
         android:id="@+id/imageView2"
         android:layout_width="116dp"
         android:layout_height="147dp"
-        app:srcCompat="@drawable/hansung2"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="-10dp" />
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toTopOf="@+id/setName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hansung2" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="84dp"
         android:layout_height="82dp"
-        app:srcCompat="@drawable/hansung3"
-        tools:layout_editor_absoluteX="288dp"
-        tools:layout_editor_absoluteY="517dp" />
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+        app:srcCompat="@drawable/hansung3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

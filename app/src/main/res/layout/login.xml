@@ -62,7 +62,7 @@
         android:id="@+id/setName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="86dp"
         android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint="이름"
@@ -92,14 +92,31 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Carrot Market"
+        android:layout_marginTop="90dp"
+        android:text="Hansung Market"
         android:textColor="#3399FF"
         android:textSize="40sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/setName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="116dp"
+        android:layout_height="147dp"
+        app:srcCompat="@drawable/hansung2"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="-10dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="84dp"
+        android:layout_height="82dp"
+        app:srcCompat="@drawable/hansung3"
+        tools:layout_editor_absoluteX="288dp"
+        tools:layout_editor_absoluteY="517dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

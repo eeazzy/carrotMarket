@@ -81,10 +81,9 @@ class LoginActivity : AppCompatActivity() {
                     // 로그인에 성공한 경우 메인 화면으로 이동
                     goToMainActivity(task.result?.user)
                 }
-
                 else {
                     // 로그인에 실패한 경우 Toast 메시지로 에러를 띄워준다
-                    Toast.makeText(this, task.exception?.message, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "존재하지 않는 회원입니다.", Toast.LENGTH_LONG).show()
                 }
             }
     }

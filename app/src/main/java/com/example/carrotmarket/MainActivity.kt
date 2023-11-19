@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
         mBinding=ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(mBinding.root)
-//네비 담기 HOST
+        //네비 담기 HOST
         val navHostFragment=supportFragmentManager.findFragmentById(R.id.my_nav_host) as NavHostFragment
-//네비게이션 컨트롤
+        //네비게이션 컨트롤
         val navController=navHostFragment.navController
         //바텀 네비게이션과 묶기
         NavigationUI.setupWithNavController(mBinding.bottomHamster, navController)

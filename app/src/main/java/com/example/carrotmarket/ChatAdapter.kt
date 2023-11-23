@@ -10,6 +10,7 @@ class ChatAdapter(val items: List<Message>) : RecyclerView.Adapter<ChatAdapter.C
 
     class ChatViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         val messageText = v.findViewById<TextView>(R.id.chatText)
+        val userName = v.findViewById<TextView>(R.id.name)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatViewHolder {
@@ -25,5 +26,6 @@ class ChatAdapter(val items: List<Message>) : RecyclerView.Adapter<ChatAdapter.C
     override fun onBindViewHolder(holder: ChatViewHolder, position: Int) {
         val message = items[position]
         holder.messageText.text = message.content
+
     }
 }

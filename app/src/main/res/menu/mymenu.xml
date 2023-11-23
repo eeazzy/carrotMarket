@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/homeFragment"
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/hamster"
         android:title="상품 등록"
-        android:icon="@drawable/hamster" />
-    <item android:id="@+id/setCarrotFragment"
+        android:visible="true" />
+    <item
+        android:id="@+id/setCarrotFragment"
+        android:icon="@drawable/home"
         android:title="HOME"
-        android:icon="@drawable/hamster" />
-    <item android:id="@+id/userdataFragment"
+        android:visible="true" />
+    <item
+        android:id="@+id/userdataFragment"
+        android:icon="@drawable/img"
         android:title="내정보"
-        android:icon="@drawable/hamster" />
+        android:visible="true" />
     />
 </menu>

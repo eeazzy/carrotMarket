@@ -20,7 +20,7 @@
         app:navGraph="@navigation/nav_graph" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomHamster"
+        android:id="@+id/bottomboogie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:itemIconSize="22dp"

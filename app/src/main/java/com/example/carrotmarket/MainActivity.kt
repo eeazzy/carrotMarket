@@ -28,6 +28,6 @@ class MainActivity : AppCompatActivity() {
         //네비게이션 컨트롤
         val navController=navHostFragment.navController
         //바텀 네비게이션과 묶기
-        NavigationUI.setupWithNavController(mBinding.bottomHamster, navController)
+        NavigationUI.setupWithNavController(mBinding.bottomboogie, navController)
     }
 }

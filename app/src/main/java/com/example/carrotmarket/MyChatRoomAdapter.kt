@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 class MyChatRoomAdapter (val items: List<ChatData>) : RecyclerView.Adapter<MyChatRoomAdapter.ChatRoomViewHolder>() {
 
     class ChatRoomViewHolder(v: View) : RecyclerView.ViewHolder(v) {
-        val roomNam = v.findViewById<TextView>(R.id.chatText2)
+        val roomNam = v.findViewById<TextView>(R.id.RoomName)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatRoomViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val view = layoutInflater.inflate(R.layout.showchat2, parent, false)
+        val view = layoutInflater.inflate(R.layout.showchat_right, parent, false)
         return ChatRoomViewHolder(view)
     }
 

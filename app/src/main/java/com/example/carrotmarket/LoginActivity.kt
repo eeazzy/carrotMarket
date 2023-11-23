@@ -32,9 +32,10 @@ class LoginActivity : AppCompatActivity() {
         var loginBtn=findViewById<Button>(R.id.btnLogin)
         regiBtn.setOnClickListener {
             val name=nameSet.text.toString()
+            val birth=birthSet.text.toString()
             val email=emailSet.text.toString()
             val password=passwordSet.text.toString()
-            val birth=birthSet.text.toString()
+
             signUp(name,email,password,birth)
         }
 
@@ -61,9 +62,9 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
-    private fun addUserToFirestore(name: String, email: String, phoneNumber: String, uid: String) {
+    private fun addUserToFirestore(name: String, email: String, birth: String, uid: String) {
         val db = FirebaseFirestore.getInstance()
-        val user=User(name,email,phoneNumber,uid)
+        val user=User(name,email,birth,uid)
         db.collection("users")
             .document(uid)
             .set(user)

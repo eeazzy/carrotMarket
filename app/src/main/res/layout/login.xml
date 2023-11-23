@@ -78,7 +78,7 @@
         android:layout_marginBottom="10dp"
         android:ems="12"
         android:hint="생년월일 (YYMMDD)"
-        android:inputType="number"
+        android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

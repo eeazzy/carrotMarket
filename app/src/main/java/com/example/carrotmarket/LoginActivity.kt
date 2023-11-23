@@ -23,9 +23,10 @@ class LoginActivity : AppCompatActivity() {
         auth = Firebase.auth
         database=Firebase.database.reference
         val nameSet=findViewById<EditText>(R.id.setName)
+        val birthSet=findViewById<EditText>(R.id.editBirth)
         val emailSet=findViewById<EditText>(R.id.email)
         val passwordSet=findViewById<EditText>(R.id.passwd)
-        val phoneNumSet=findViewById<EditText>(R.id.editTextPhone)
+
 
         val regiBtn=findViewById<Button>(R.id.btnRegister)
         var loginBtn=findViewById<Button>(R.id.btnLogin)
@@ -33,8 +34,8 @@ class LoginActivity : AppCompatActivity() {
             val name=nameSet.text.toString()
             val email=emailSet.text.toString()
             val password=passwordSet.text.toString()
-            val phoneNumber=phoneNumSet.text.toString()
-            signUp(name,email,password,phoneNumber)
+            val birth=birthSet.text.toString()
+            signUp(name,email,password,birth)
         }
 
         loginBtn.setOnClickListener {
@@ -42,13 +43,13 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun signUp(name:String, email: String, password: String, phoneNumber:String) {
+    fun signUp(name:String, email: String, password: String, birth:String) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     //Firebase DB에 저장 되어 있는 계정이 아닐 경우
                     //입력한 계정을 새로 등록한다
-                    addUserToFirestore(name,email,phoneNumber, auth.currentUser?.uid.toString())
+                    addUserToFirestore(name,email,birth, auth.currentUser?.uid.toString())
                     Toast.makeText(this, "회원가입이 완료되었습니다.", Toast.LENGTH_LONG).show()
                 } else if (task.exception?.message.isNullOrEmpty()) {
                     Toast.makeText(this, task.exception?.message, Toast.LENGTH_LONG).show()

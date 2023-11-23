@@ -10,25 +10,27 @@
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:ems="12"
         android:hint="이메일"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/passwd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setName" />
+        app:layout_constraintTop_toBottomOf="@+id/editBirth" />
 
     <EditText
         android:id="@+id/passwd"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="47dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="30dp"
         android:ems="12"
         android:hint="비밀번호"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
@@ -57,36 +59,37 @@
     <EditText
         android:id="@+id/setName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:ems="12"
         android:hint="이름"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintBottom_toTopOf="@+id/editBirth"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/editBirth"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:ems="12"
-        android:hint="전화번호"
-        android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+        android:hint="생년월일 (YYMMDD)"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwd" />
+        app:layout_constraintTop_toBottomOf="@+id/setName" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginBottom="5dp"
         android:fontFamily="@font/gaegu_bold"
         android:text="Hansung Market"
         android:textColor="#3399FF"
@@ -94,18 +97,22 @@
         android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/setName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="141dp"
-        android:layout_height="185dp"
-        android:layout_marginBottom="120dp"
-        app:layout_constraintBottom_toTopOf="@+id/setName"
+        android:layout_width="157dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="100dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13"
         app:srcCompat="@drawable/hansung2" />
 
     <ImageView
@@ -113,12 +120,12 @@
         android:layout_width="84dp"
         android:layout_height="82dp"
         android:layout_marginStart="285dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+        app:layout_constraintTop_toTopOf="@+id/passwd"
         app:srcCompat="@drawable/hansung3" />
 
 

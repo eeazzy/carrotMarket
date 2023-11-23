@@ -12,13 +12,25 @@ app:startDestination="@id/homeFragment">
     tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_addProductFragment2"
-            app:destination="@id/addProductFragment2" />
+            app:destination="@id/addProductFragment2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_homeFragment_to_editProductFragment2"
-            app:destination="@id/editProductFragment2" />
+            app:destination="@id/editProductFragment2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_homeFragment_to_showOtherProductFragment"
-            app:destination="@id/showOtherProductFragment" />
+            app:destination="@id/showOtherProductFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
 <fragment
     android:id="@+id/userdataFragment"
@@ -27,18 +39,31 @@ app:startDestination="@id/homeFragment">
     tools:layout="@layout/fragment_userdata" >
     <action
         android:id="@+id/action_userdataFragment_to_chattingFragment"
-        app:destination="@id/chattingFragment" />
+        app:destination="@id/chattingFragment"
+        app:enterAnim="@android:anim/slide_out_right"
+        app:exitAnim="@android:anim/slide_in_left"
+        app:popEnterAnim="@android:anim/slide_out_right"
+        app:popExitAnim="@android:anim/slide_in_left" />
     <action
         android:id="@+id/action_userdataFragment_to_otherChattingFragment"
-        app:destination="@id/otherChattingFragment" />
+        app:destination="@id/otherChattingFragment"
+        app:enterAnim="@android:anim/slide_in_left"
+        app:exitAnim="@android:anim/slide_out_right"
+        app:popEnterAnim="@android:anim/slide_in_left"
+        app:popExitAnim="@android:anim/slide_out_right" />
 </fragment>
     <fragment
         android:id="@+id/addProductFragment2"
         android:name="com.example.carrotmarket.fragments.addProductFragment"
-        android:label="addProductFragment" >
+        android:label="addProductFragment"
+        >
         <action
             android:id="@+id/action_addProductFragment2_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/editProductFragment2"
@@ -47,7 +72,11 @@ app:startDestination="@id/homeFragment">
         tools:layout="@layout/fragment_editproduct" >
         <action
             android:id="@+id/action_editProductFragment2_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_in_left" />
         <argument
             app:argType="string"
             android:name="productTitle"
@@ -60,14 +89,22 @@ app:startDestination="@id/homeFragment">
         tools:layout="@layout/fragment_showotherproduct" >
         <action
             android:id="@+id/action_showOtherProductFragment_to_homeFragment2"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_in_left" />
         <argument
             android:name="otherTitle"
             app:argType="string"
             app:nullable="true"/>
         <action
             android:id="@+id/action_showOtherProductFragment_to_chattingFragment"
-            app:destination="@id/chattingFragment" />
+            app:destination="@id/chattingFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/chattingFragment"
@@ -75,13 +112,21 @@ app:startDestination="@id/homeFragment">
         android:label="chattingFragment" >
         <action
             android:id="@+id/action_chattingFragment_to_showOtherProductFragment"
-            app:destination="@id/showOtherProductFragment" />
+            app:destination="@id/showOtherProductFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
         <argument
             android:name="getProductUid"
             app:argType="string" />
         <action
             android:id="@+id/action_chattingFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/otherChattingFragment"
@@ -92,6 +137,10 @@ app:startDestination="@id/homeFragment">
             app:argType="string" />
         <action
             android:id="@+id/action_otherChattingFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
 </navigation>

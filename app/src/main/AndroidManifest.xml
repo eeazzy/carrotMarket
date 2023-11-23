@@ -13,21 +13,27 @@
         android:theme="@style/Theme.CarrotMarket"
         tools:targetApi="31">
         <activity
+            android:name=".SplashMainActivity"
+            android:exported="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- 새로운 LoginActivity를 추가합니다. -->
+        <activity android:name=".MainActivity">
 
-        <!-- 새로운 LoginActivity를 추가합니다. -->
-        <activity
-            android:name=".MainActivity">
             <!-- LoginActivity와 관련된 설정 (라벨, 아이콘, 테마 등)을 추가할 수 있습니다. -->
         </activity>
-
     </application>
-
 
 </manifest>

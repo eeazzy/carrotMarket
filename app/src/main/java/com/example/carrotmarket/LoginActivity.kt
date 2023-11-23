@@ -23,9 +23,10 @@ class LoginActivity : AppCompatActivity() {
         auth = Firebase.auth
         database=Firebase.database.reference
         val nameSet=findViewById<EditText>(R.id.setName)
+        val birthSet=findViewById<EditText>(R.id.editBirth)
         val emailSet=findViewById<EditText>(R.id.email)
         val passwordSet=findViewById<EditText>(R.id.passwd)
-        val phoneNumSet=findViewById<EditText>(R.id.editTextPhone)
+
 
         val regiBtn=findViewById<Button>(R.id.btnRegister)
         var loginBtn=findViewById<Button>(R.id.btnLogin)
@@ -33,29 +34,28 @@ class LoginActivity : AppCompatActivity() {
             val name=nameSet.text.toString()
             val email=emailSet.text.toString()
             val password=passwordSet.text.toString()
-            val phoneNumber=phoneNumSet.text.toString()
-            signUp(name,email,password,phoneNumber)
+            val birth=birthSet.text.toString()
+            signUp(name,email,password,birth)
         }
 
         loginBtn.setOnClickListener {
             signIn(emailSet.text.toString(),passwordSet.text.toString())
-
         }
     }
 
-    fun signUp(name:String, email: String, password: String, phoneNumber:String) {
+    fun signUp(name:String, email: String, password: String, birth:String) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     //Firebase DB에 저장 되어 있는 계정이 아닐 경우
                     //입력한 계정을 새로 등록한다
-                    addUserToFirestore(name,email,phoneNumber, auth.currentUser?.uid.toString())
-                    Toast.makeText(this, "회원가입에 성공하셨습니다!", Toast.LENGTH_LONG).show()
+                    addUserToFirestore(name,email,birth, auth.currentUser?.uid.toString())
+                    Toast.makeText(this, "회원가입이 완료되었습니다.", Toast.LENGTH_LONG).show()
                 } else if (task.exception?.message.isNullOrEmpty()) {
                     Toast.makeText(this, task.exception?.message, Toast.LENGTH_LONG).show()
                 } else {
                     //입력한 계정 정보가 이미 Firebase DB에 있는 경우
-                    Toast.makeText(this, "기존 회원이시군요?바로 로그인", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "이미 가입된 회원입니다.", Toast.LENGTH_LONG).show()
                     signIn(email, password)
                 }
             }
@@ -75,22 +75,21 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
-
-    fun signIn(email: String, password: String) {//로그인
+    fun signIn(email: String, password: String) { // 로그인
         auth?.signInWithEmailAndPassword(email, password)
             ?.addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    //로그인에 성공한 경우 메인 화면으로 이동
+                    // 로그인에 성공한 경우 메인 화면으로 이동
                     goToMainActivity(task.result?.user)
-                } else {
-                    //로그인에 실패한 경우 Toast 메시지로 에러를 띄워준다
-                    Toast.makeText(this, task.exception?.message, Toast.LENGTH_LONG).show()
+                }
+                else {
+                    // 로그인에 실패한 경우 Toast 메시지로 에러를 띄워준다
+                    Toast.makeText(this, "존재하지 않는 회원입니다.", Toast.LENGTH_LONG).show()
                 }
             }
     }
 
-    
-    fun goToMainActivity(user: FirebaseUser?) {//로그인에 성공했을떄 메인 엑티비티로 이동을 허용
+    fun goToMainActivity(user: FirebaseUser?) {// 로그인에 성공했을떄 메인 엑티비티로 이동을 허용
         if (user != null) {
             startActivity(Intent(this, MainActivity::class.java))
         }

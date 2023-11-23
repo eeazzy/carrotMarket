@@ -8,7 +8,7 @@ data class ChatData(
     val uid_Name: String,
     val uid2: String,
     val uid2_Name: String,
-    val message: Message,
+    val message: Message
 ) {
     constructor() : this("", "","","", "", Message()) // 현재 시간으로 초기화
 }

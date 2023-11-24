@@ -19,7 +19,7 @@
             android:layout_width="380dp"
             android:layout_height="350dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="20dp"
             android:gravity="top|start"
             android:hint="상품내용을 입력해주세요."
             android:inputType="text"
@@ -35,10 +35,12 @@
             android:layout_height="57dp"
             android:layout_marginStart="12dp"
             android:layout_marginTop="2dp"
+            android:layout_marginEnd="13dp"
             android:layout_marginBottom="2dp"
             android:hint="가격 입력"
             android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/editDetails"
+            app:layout_constraintEnd_toStartOf="@+id/textView6"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTitle" />
 
@@ -48,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="140dp"
             android:layout_marginBottom="2dp"
-            android:hint="상품이름(제목)"
+            android:hint="상품이름 (제목)"
             android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/editPrice"
             app:layout_constraintEnd_toEndOf="parent"
@@ -59,57 +61,49 @@
         <Switch
             android:id="@+id/sellState"
             android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="280dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginEnd="92dp"
             android:layout_marginBottom="120dp"
             android:layout_weight="1"
             android:text="판매상태"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/editTitle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintEnd_toStartOf="@+id/editItem"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.333" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/editItem"
+            style="@style/Widget.Material3.Button.IconButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/lightblue"
-            android:text="상품 수정"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/editDeleteItem"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editDetails"
-            app:layout_constraintVertical_bias="0.839" />
-
-        <Button
-            android:id="@+id/editDeleteItem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="33dp"
-            android:backgroundTint="@color/lightblue"
-            android:text="등록취소"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/editBackHomeBtn"
-            app:layout_constraintStart_toEndOf="@+id/editItem"
-            app:layout_constraintTop_toBottomOf="@+id/editDetails"
-            app:layout_constraintVertical_bias="0.839" />
+            android:layout_height="50dp"
+            android:layout_marginEnd="1dp"
+            android:drawableTint="#000000"
+            android:text="확인"
+            android:textColor="#000000"
+            android:textColorHighlight="#000000"
+            android:textColorHint="#000000"
+            android:textColorLink="#000000"
+            android:textSize="16sp"
+            app:iconTintMode="add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sellState"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/editBackHomeBtn"
+            style="@style/Widget.Material3.Button.IconButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="100dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/lightblue"
-            android:text="뒤로가기"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.407"
-            app:layout_constraintStart_toEndOf="@+id/editDeleteItem"
-            app:layout_constraintTop_toBottomOf="@+id/editDetails"
-            app:layout_constraintVertical_bias="0.839" />
+            app:icon="@drawable/img_2"
+            app:iconTint="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/sellState"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView6"
@@ -123,6 +117,20 @@
             app:layout_constraintStart_toEndOf="@+id/editPrice"
             app:layout_constraintTop_toBottomOf="@+id/editTitle"
             app:layout_constraintVertical_bias="0.49" />
+
+        <Button
+            android:id="@+id/editDeleteItem"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="320dp"
+            android:text="등록 취소"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

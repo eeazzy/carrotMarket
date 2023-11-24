@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/homeFragment"
-        android:icon="@drawable/hamster"
+        android:icon="@drawable/home"
         android:title="상품 등록"
         android:visible="true" />
     <item
         android:id="@+id/setCarrotFragment"
-        android:icon="@drawable/home"
+        android:icon="@drawable/hansung5"
         android:title="HOME"
         android:visible="true" />
     <item
         android:id="@+id/userdataFragment"
-        android:icon="@drawable/img"
+        android:icon="@drawable/img_1"
         android:title="내정보"
         android:visible="true" />
     />

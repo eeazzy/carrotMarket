@@ -39,7 +39,7 @@ class chattingFragment : Fragment() {
         mBinding = binding
         recyclerView = binding.chatRecyclerView
         recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = ChatAdapter(MessageData)
+        adapter = ChatAdapter(MessageData, currentUser?.uid.toString())
         recyclerView.adapter = adapter
         val getProductUid = arguments?.getString("getProductUid")
 

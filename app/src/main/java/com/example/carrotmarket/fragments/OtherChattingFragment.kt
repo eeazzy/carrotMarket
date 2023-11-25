@@ -40,7 +40,7 @@ class OtherChattingFragment : Fragment() {
         mBinding = binding
         recyclerView = binding.otherChatRecyclerView
         recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = OtherChatAdapter(MessageData)
+        adapter = OtherChatAdapter(MessageData, currentUser?.uid.toString())
         recyclerView.adapter = adapter
 
         val chatRoomId = arguments?.getString("getChatRoomId")

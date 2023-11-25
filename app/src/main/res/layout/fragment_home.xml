@@ -10,48 +10,57 @@
     tools:context="com.example.carrotmarket.fragments.HomeFragment">
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ignoreSellingProduct"
-        android:layout_width="103dp"
-        android:layout_height="76dp"
-        android:text="판매상품제외"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="판매완료
+        상품 제외"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/default_btn"
+        android:textColor="@color/white"
+        android:fontFamily="@font/bmpro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/highest_price"
-        android:layout_width="wrap_content"
-        android:layout_height="62dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginEnd="36dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
         android:text="높은가격순"
+        android:fontFamily="@font/bmpro"
+        android:textColor="@color/white"
+        android:background="@drawable/default_btn"
         app:layout_constraintEnd_toStartOf="@+id/lowest_price"
         app:layout_constraintStart_toEndOf="@+id/ignoreSellingProduct"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/lowest_price"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:text="낮은가격순"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/bmpro"
+        android:textColor="@color/white"
+        android:background="@drawable/default_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/myRecyclerView"
-        android:layout_width="382dp"
-        android:layout_height="596dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
+        android:layout_width="380dp"
+        android:layout_height="630dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/highest_price" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addProductBtn"

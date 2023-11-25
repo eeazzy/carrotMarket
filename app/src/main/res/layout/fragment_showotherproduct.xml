@@ -23,13 +23,18 @@
 
             <TextView
                 android:id="@+id/other1"
+                android:paddingLeft="10dp"
+                android:paddingTop="50dp"
+                android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="제목" />
+                android:fontFamily="@font/cafessurroundair"
+                android:text="제목 : " />
 
             <EditText
                 android:id="@+id/otherTitle"
-                android:layout_width="142dp"
+                android:paddingLeft="10dp"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:hint="title" />
@@ -44,15 +49,19 @@
 
             <TextView
                 android:id="@+id/other2"
+                android:paddingLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="내용"
+                android:fontFamily="@font/cafessurroundair"
+                android:textSize="20dp"
+                android:text="내용 : "
                 />
 
             <EditText
                 android:id="@+id/otherDetails"
-                android:layout_width="373dp"
-                android:layout_height="145dp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
                 android:inputType="text"
                 android:hint="detail" />
         </LinearLayout>
@@ -65,16 +74,20 @@
 
             <TextView
                 android:id="@+id/other3"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/cafessurroundair"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="가격"
+                android:textSize="20dp"
+                android:text="가격 : "
                 />
 
             <EditText
                 android:id="@+id/otherPrice"
-                android:layout_width="187dp"
-                android:layout_height="57dp"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
                 android:hint="price"
+                android:paddingLeft="10dp"
                 android:inputType="text" />
 
         </LinearLayout>
@@ -84,17 +97,28 @@
         android:orientation="horizontal"
         android:layout_weight="1">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/otherBackHomeBtn"
+            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/default_btn"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:fontFamily="@font/bmpro"
             android:layout_weight="1"
             android:text="뒤로가기" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/startChatBtn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/default_btn"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:fontFamily="@font/bmpro"
             android:layout_weight="1"
             android:text="채팅방으로" />
 

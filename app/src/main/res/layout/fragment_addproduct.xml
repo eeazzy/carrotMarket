@@ -51,6 +51,7 @@
             android:layout_marginTop="140dp"
             android:layout_marginBottom="2dp"
             android:hint="상품이름 (제목)"
+            android:fontFamily=""
             android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/setPrice"
             app:layout_constraintEnd_toEndOf="parent"

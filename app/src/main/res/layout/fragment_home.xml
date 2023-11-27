@@ -59,20 +59,26 @@
         android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/highest_price" />
+        app:layout_constraintTop_toBottomOf="@+id/highest_price"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addProductBtn"
         android:layout_width="54dp"
         android:layout_height="62dp"
         android:layout_marginTop="485dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="57dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/lightblue2"
         android:clickable="true"
-        android:src="@drawable/hamster"
+        android:src="@drawable/plus"
+        android:textColor="#FFF44BBC"
+        android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="@+id/myRecyclerView"
         app:layout_constraintEnd_toEndOf="@+id/myRecyclerView"
-        app:layout_constraintTop_toTopOf="@+id/myRecyclerView" />
+        app:layout_constraintTop_toTopOf="@+id/myRecyclerView"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

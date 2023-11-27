@@ -5,11 +5,7 @@
         android:icon="@drawable/home"
         android:title="상품 등록"
         android:visible="true" />
-    <item
-        android:id="@+id/setCarrotFragment"
-        android:icon="@drawable/hansung5"
-        android:title="HOME"
-        android:visible="true" />
+
     <item
         android:id="@+id/userdataFragment"
         android:icon="@drawable/img_1"

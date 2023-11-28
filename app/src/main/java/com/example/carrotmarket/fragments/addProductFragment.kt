@@ -38,7 +38,6 @@ class addProductFragment : Fragment() {
                 if (document != null) {
                     myName= document.getString("name").toString()//name필드의 값을 가져와 myName에 넣어줘요
                 } else {
-                    //ㅇㅅㅇ
                 }
             }
             .addOnFailureListener { exception ->
@@ -57,9 +56,14 @@ class addProductFragment : Fragment() {
                 val uuid = UUID.randomUUID().toString()
                 var title=mBinding?.setTitle?.text.toString()
                 var detail=mBinding?.setDetails?.text.toString()
-                var price=mBinding?.setPrice?.text.toString().toDouble()
-                addUserToFirestore(uuid,uid,myName, title, detail, price, false)
-                Toast.makeText(context, "데이터 저장 완료.", Toast.LENGTH_SHORT).show()
+                var price=mBinding?.setPrice?.text.toString().toDoubleOrNull()
+                if(price!=null) {
+                    addUserToFirestore(uuid, uid, myName, title, detail, price, false)
+                    Toast.makeText(context, "데이터 저장 완료.", Toast.LENGTH_SHORT).show()
+                }
+                else{
+                    Toast.makeText(context, "유효한 가격을 입력해주세요.", Toast.LENGTH_SHORT).show()
+                }
             } else {
                 Toast.makeText(context, "사용자가 로그인되지 않았습니다.", Toast.LENGTH_SHORT).show()
             }

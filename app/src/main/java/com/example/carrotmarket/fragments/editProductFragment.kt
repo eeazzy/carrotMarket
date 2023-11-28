@@ -82,13 +82,19 @@ class editProductFragment : Fragment() {
                 if(sameUser == user.uid) {
                     var title = mBinding?.editTitle?.text.toString()
                     var detail = mBinding?.editDetails?.text.toString()
-                    var price = mBinding?.editPrice?.text.toString().toDouble()
-                    sellStates?.let { it1 ->
-                        editUserToFirestore(sellerItemUid,sameUser,sellerName, title,detail, price,
-                            it1
-                        )
-                    }//판매자의 이름은 그대로 저장
-                    Toast.makeText(requireContext(), "수정완료", Toast.LENGTH_LONG).show()
+                    var price = mBinding?.editPrice?.text.toString().toDoubleOrNull()
+                    if(price!=null) {
+                        sellStates?.let { it1 ->
+                            editUserToFirestore(sellerItemUid,sameUser,sellerName, title,detail, price,
+                                it1
+                            )
+                        }//판매자의 이름은 그대로 저장
+                        Toast.makeText(requireContext(), "수정완료", Toast.LENGTH_LONG).show()
+                    }
+                    else{
+                        Toast.makeText(context, "유효한 가격을 입력해주세요.", Toast.LENGTH_SHORT).show()
+                    }
+
                 }
 
             }

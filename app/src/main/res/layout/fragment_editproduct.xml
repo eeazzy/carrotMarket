@@ -22,7 +22,6 @@
             android:layout_margin="10dp"
             android:layout_marginBottom="20dp"
             android:breakStrategy="simple"
-            android:fontFamily="@font/cafessurroundair"
             android:gravity="top|start"
             android:hint="상품내용을 입력해주세요."
             android:textSize="20sp"
@@ -42,7 +41,6 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="13dp"
             android:layout_marginBottom="2dp"
-            android:fontFamily="@font/cafessurroundair"
 
             android:hint="가격 입력"
             android:inputType="text"
@@ -58,8 +56,6 @@
             android:layout_marginTop="140dp"
             android:layout_marginBottom="2dp"
             android:hint="상품이름 (제목)"
-            android:fontFamily="@font/cafessurroundair"
-
             android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/editPrice"
             app:layout_constraintEnd_toEndOf="parent"
@@ -69,8 +65,6 @@
 
         <Switch
             android:id="@+id/sellState"
-            android:fontFamily="@font/cafessurroundair"
-
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:layout_marginStart="140dp"
@@ -90,7 +84,6 @@
             style="@style/Widget.Material3.Button.IconButton"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:fontFamily="@font/cafessurroundair"
             android:drawableTint="#000000"
             android:text="확인"
             android:textColor="#000000"

@@ -1,6 +1,7 @@
 package com.example.carrotmarket.fragments
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +15,7 @@ import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.carrotmarket.LoginActivity
 import com.example.carrotmarket.MyAdapter
 import com.example.carrotmarket.R
 import com.example.carrotmarket.UserDatastock
@@ -81,6 +83,7 @@ class HomeFragment : Fragment() {
         val sortByHighest: Button? = binding.highestPrice
         val sortByLowest: Button? = binding.lowestPrice
         val addProdcutBtn:FloatingActionButton? = binding.addProductBtn
+        val logOutBtn: Button? = binding.logoutBtn
 
 
         fun updateData() {
@@ -102,7 +105,7 @@ class HomeFragment : Fragment() {
                         dataList.add(userData)
                     }
 
-                    if (!flag) {
+                    if (flag) {
                         dataList.sortBy { it.price }
                     } else {
                         dataList.sortByDescending { it.price }
@@ -120,12 +123,12 @@ class HomeFragment : Fragment() {
         updateData() // 초기 데이터 로드
 
         sortByHighest?.setOnClickListener {
-            flag = !flag
+            flag = false
             updateData()
         }
 
         sortByLowest?.setOnClickListener {
-            flag = !flag
+            flag = true
             updateData()
         }
 
@@ -139,8 +142,17 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_homeFragment_to_addProductFragment2)
         }
 
+        logOutBtn?.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()//로그아웃
+            val intent = Intent(requireActivity(), LoginActivity::class.java)
+            startActivity(intent)
+        }
+
         return mBinding?.root
     }
+
+
+
 
     override fun onDestroyView() {//바인딩 정책에 의거,해당 view를 destroy
         mBinding = null

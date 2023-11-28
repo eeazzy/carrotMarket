@@ -12,9 +12,9 @@ class ChatAdapter(val items: List<Message>, val currentUid: String) : RecyclerVi
 
     override fun getItemViewType(position: Int): Int {
         return if (items[position].senderUid == currentUid){
-            R.layout.showchat_right
-        } else {
             R.layout.showchat_left
+        } else {
+            R.layout.showchat_right
         }
     }
 

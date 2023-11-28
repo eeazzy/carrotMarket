@@ -24,7 +24,7 @@ class MyChatRoomAdapter (val items: List<ChatData>) : RecyclerView.Adapter<MyCha
 
     override fun onBindViewHolder(holder: ChatRoomViewHolder, position: Int) {
         val roomDatas = items[position]
-        holder.roomNam.text = roomDatas.uid_Name.toString()+" "+roomDatas.uid2_Name.toString()+"채팅방"
+        holder.roomNam.text = roomDatas.uid_Name.toString()+"과 "+roomDatas.uid2_Name.toString()+"의 채팅방"
         holder.roomNam.setOnClickListener {
             itemClickListener.onClick(it, position)
 

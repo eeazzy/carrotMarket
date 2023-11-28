@@ -10,12 +10,12 @@
     tools:context="com.example.carrotmarket.fragments.HomeFragment">
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/ignoreSellingProduct"
+    <Switch
+        android:id="@+id/SellingProduct"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:text="판매완료
-        상품 제외"
+        android:padding="10dp"
+        android:text="판매"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:background="@drawable/default_btn"

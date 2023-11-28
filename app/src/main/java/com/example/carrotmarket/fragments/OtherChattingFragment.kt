@@ -44,7 +44,7 @@ class OtherChattingFragment : Fragment() {
         recyclerView.adapter = adapter
 
         val chatRoomId = arguments?.getString("getChatRoomId")
-        Toast.makeText(context, chatRoomId, Toast.LENGTH_LONG).show()
+        //Toast.makeText(context, chatRoomId, Toast.LENGTH_LONG).show()
         val chatBtn = mBinding?.otherChatButton
         val exitChatBtn = mBinding?.otherExitChatBtn
 

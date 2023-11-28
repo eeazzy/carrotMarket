@@ -56,7 +56,7 @@ class HomeFragment : Fragment() {
         recyclerView = binding.myRecyclerView
         recyclerView.layoutManager = LinearLayoutManager(context)
         adapter = MyAdapter(userList)
-        val sortByIgnore: Button? = binding.ignoreSellingProduct
+        val sortByIgnore: Button? = binding.SellingProduct
 
         adapter.setItemClickListener(object: MyAdapter.OnItemClickListener {
             override fun onClick(v: View, position: Int) {
@@ -134,7 +134,14 @@ class HomeFragment : Fragment() {
 
         sortByIgnore?.setOnClickListener {
             count++
-            sellFlag = count % 2 == 1
+            count = count % 2
+            sellFlag = count == 1
+            if(count ==0)
+            {
+                Toast.makeText(context,"판매중인 상품입니다.",Toast.LENGTH_LONG).show()
+            }
+            else
+                Toast.makeText(context,"판매완료 상품이 포함되어 있습니다.",Toast.LENGTH_LONG).show()
             updateData()
         }
 

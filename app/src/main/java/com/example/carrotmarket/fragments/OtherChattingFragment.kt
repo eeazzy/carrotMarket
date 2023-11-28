@@ -101,7 +101,7 @@ class OtherChattingFragment : Fragment() {
         }
 
         exitChatBtn?.setOnClickListener {
-            findNavController().navigate(R.id.action_otherChattingFragment_to_homeFragment)
+            findNavController().navigate(R.id.action_otherChattingFragment_to_userdataFragment)
         }
 
         return mBinding?.root

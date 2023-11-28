@@ -51,7 +51,6 @@ class showOtherProductFragment : Fragment() {
             findNavController().navigate(R.id.action_showOtherProductFragment_to_homeFragment2)//프래그먼트의 이동
             this.onDestroyView()
         }
-
         moveToChatRoom?.setOnClickListener {
            val action3= showOtherProductFragmentDirections.actionShowOtherProductFragmentToChattingFragment(getProductUid)
             findNavController().navigate(action3)

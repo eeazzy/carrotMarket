@@ -133,9 +133,6 @@ app:startDestination="@id/homeFragment">
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
-        <action
-            android:id="@+id/action_chattingFragment_to_userdataFragment"
-            app:destination="@id/userdataFragment" />
     </fragment>
     <fragment
         android:id="@+id/otherChattingFragment"
@@ -151,15 +148,5 @@ app:startDestination="@id/homeFragment">
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
-        <action
-            android:id="@+id/action_otherChattingFragment_to_homeFragment2"
-            app:destination="@id/homeFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right" />
-        <action
-            android:id="@+id/action_otherChattingFragment_to_userdataFragment"
-            app:destination="@id/userdataFragment" />
     </fragment>
 </navigation>

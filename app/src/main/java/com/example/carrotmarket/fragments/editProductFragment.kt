@@ -36,7 +36,7 @@ class editProductFragment : Fragment() {
         var switch:Switch?=null
         var sellStates:Boolean?=false
         var productTitle = arguments?.getString("productTitle")//productTitle 은 제품의 itemUid
-        Toast.makeText(requireContext(), productTitle, Toast.LENGTH_LONG).show()
+        //Toast.makeText(requireContext(), productTitle, Toast.LENGTH_LONG).show()
         val docRef = firestore.collection("userDataStock").document(productTitle.toString())//데이터베이스에서 get
         docRef.get()
             .addOnSuccessListener { document ->

@@ -40,32 +40,6 @@
                 android:hint="title" />
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/other2"
-                android:paddingLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/cafessurroundair"
-                android:textSize="20dp"
-                android:text="내용 : "
-                />
-
-            <EditText
-                android:id="@+id/otherDetails"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:inputType="text"
-                android:hint="detail" />
-        </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,6 +65,33 @@
                 android:inputType="text" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/other2"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cafessurroundair"
+                android:textSize="20dp"
+                android:text="내용 : "
+                />
+
+            <EditText
+                android:id="@+id/otherDetails"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:inputType="textMultiLine"
+                android:hint="detail" />
+        </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -104,6 +105,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/default_btn"
             android:textColor="@color/white"
+            android:layout_gravity="bottom"
             android:textSize="20dp"
             android:fontFamily="@font/bmpro"
             android:layout_weight="1"
@@ -119,6 +121,8 @@
             android:textColor="@color/white"
             android:textSize="20dp"
             android:fontFamily="@font/bmpro"
+            android:layout_gravity="bottom"
+
             android:layout_weight="1"
             android:text="채팅방으로" />
 

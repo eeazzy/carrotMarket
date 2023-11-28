@@ -14,13 +14,13 @@
         android:id="@+id/SellingProduct"
         android:layout_width="100dp"
         android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/default_btn"
+        android:fontFamily="@font/bmpro"
         android:padding="10dp"
         android:text="판매"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:background="@drawable/default_btn"
         android:textColor="@color/white"
-        android:fontFamily="@font/bmpro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,23 +28,21 @@
         android:id="@+id/highest_price"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
         android:background="@drawable/default_btn"
         android:fontFamily="@font/bmpro"
         android:text="높은가격순"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/lowest_price"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/lowest_price"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="88dp"
+        android:layout_marginEnd="96dp"
         android:background="@drawable/default_btn"
         android:fontFamily="@font/bmpro"
         android:text="낮은가격순"
@@ -80,9 +78,13 @@
         android:id="@+id/logoutBtn"
         android:layout_width="95dp"
         android:layout_height="56dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="1dp"
+        android:fontFamily="@font/bmpro"
         android:text="로그아웃"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toEndOf="@+id/lowest_price"
         app:layout_constraintTop_toTopOf="parent" />
 

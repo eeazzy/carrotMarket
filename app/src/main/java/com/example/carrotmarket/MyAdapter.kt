@@ -10,6 +10,7 @@ class MyAdapter(val items: List<UserDatastock>) : RecyclerView.Adapter<MyAdapter
     class MyViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         val seller_title = v.findViewById<TextView>(R.id.seller_title)
         val seller_name = v.findViewById<TextView>(R.id.seller_name)
+        val sell_state=v.findViewById<TextView>(R.id.sell_state)
         val seller_price = v.findViewById<TextView>(R.id.seller_price)
     }
 
@@ -24,13 +25,14 @@ class MyAdapter(val items: List<UserDatastock>) : RecyclerView.Adapter<MyAdapter
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-       holder.seller_title.text=items[position].title.toString()
+       holder.seller_title.text="상품명: "+items[position].title.toString()
         if(items[position].isSell) {
-            holder.seller_name.text = "판매완료"
+            holder.sell_state.text = "판매완료"
         }else {
-            holder.seller_name.text = "판매중..."
+            holder.sell_state.text = "판매중..."
         }
-        holder.seller_price.text=items[position].price.toString()
+        holder.seller_name.text="판매자: "+items[position].sellerName.toString()
+        holder.seller_price.text="가격: "+items[position].price.toString().trimEnd('0').trimEnd('.')+"원"
         holder.itemView.setOnClickListener {
             itemClickListener.onClick(it, position)
         }

@@ -20,7 +20,7 @@ class SplashMainActivity : AppCompatActivity() {
         Handler().postDelayed(
             {
                 Firebase.auth.signOut()
-                Toast.makeText(this,"로그아웃 완료!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"환영합니다!", Toast.LENGTH_LONG).show()
                 startActivity(Intent(this, LoginActivity::class.java))
                 finish()
 

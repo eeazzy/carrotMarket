@@ -67,7 +67,7 @@ class HomeFragment : Fragment() {
                     findNavController().navigate(action)
                 }
                 else{
-                    Toast.makeText(requireContext(), "다른 사용자의 제품", Toast.LENGTH_LONG).show()
+                    //Toast.makeText(requireContext(), "다른 사용자의 제품", Toast.LENGTH_LONG).show()
                     val action2 =
                         HomeFragmentDirections.actionHomeFragmentToShowOtherProductFragment(userList[position].itemUid)
                     findNavController().navigate(action2)
@@ -144,6 +144,7 @@ class HomeFragment : Fragment() {
 
         logOutBtn?.setOnClickListener {
             FirebaseAuth.getInstance().signOut()//로그아웃
+            Toast.makeText(context,"유저가 로그아웃하였습니다.",Toast.LENGTH_LONG).show()
             val intent = Intent(requireActivity(), LoginActivity::class.java)
             startActivity(intent)
         }

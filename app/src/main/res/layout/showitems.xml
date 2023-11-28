@@ -21,9 +21,18 @@
         android:id="@+id/seller_title"
         android:layout_width="217dp"
         android:layout_height="20dp"
+        android:layout_marginStart="17dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="77dp"
         android:text="제목"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sell_state"
+        android:layout_width="80dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:text="판매상태"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,19 +40,19 @@
         android:id="@+id/seller_name"
         android:layout_width="214dp"
         android:layout_height="24dp"
+        android:layout_marginStart="17dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="80dp"
         android:text="판매자"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/seller_title" />
 
     <TextView
         android:id="@+id/seller_price"
         android:layout_width="211dp"
         android:layout_height="25dp"
-        android:layout_marginEnd="83dp"
+        android:layout_marginStart="19dp"
         android:layout_marginBottom="14dp"
         android:text="가격"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/imageView3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

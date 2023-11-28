@@ -45,6 +45,10 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun signUp(name:String, email: String, password: String, birth:String) {
+        if (email.isEmpty() || password.isEmpty()||name.isEmpty()||birth.isEmpty()) {//null값 처리
+            Toast.makeText(this, "회원 가입을 위한 모든 정보를 입력해주세요.", Toast.LENGTH_SHORT).show()
+            return
+        }
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
